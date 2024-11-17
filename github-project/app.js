@@ -3,8 +3,8 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
-const token = "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";
+const PORT = process.env.PORT || 4000;
+const token = "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";
 
 // Statik dosyalar için "public" klasörünü ayarla
 app.use(express.static(path.join(__dirname, 'public')));
@@ -46,6 +46,8 @@ app.get('/api/repositories/:owner/:repo/languages', async (req, res) => {
         res.status(500).send('Dil verileri alınamadı.');
     }
 });
+
+ 
 
 // Sunucuyu başlat
 app.listen(PORT, () => {
