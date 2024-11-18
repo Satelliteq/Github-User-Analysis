@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Rapor Projesi</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>GitHub Kullanıcı Arama</title>
+    <link rel="stylesheet" href="user.css">
 </head>
 <body>
     <nav>
@@ -13,19 +13,26 @@
             <div>GitHub User Analytics</div> 
         </div>
         <ul>
-            <li><a href="#">Genel Bakış</a></li>
+            <li><a href="http://localhost:4000">Genel Bakış</a></li>
             <li><a href="/user-analysis">Kullanıcı Analizi</a></li>
         </ul>
     </nav>
+
     
     <div class="container">
+
         <div class="main-text-flex">
-            <h1><span>GitHub</span> Dünyasının <span>Nabzını</span>  Tutun.</h1>
-            <p>"Popüler projeleri keşfedin, kodlama eğilimlerine göz atın, GitHub dünyasına derinlemesine dalın."</p>
-            <button class="btn">Şimdi Deneyin</button>
+            <h1><span>GitHub</span> Kullanıcılarına Bakın</h1>
+
+            <form id="search-form">
+                <input type="text" id="username" placeholder="Kullanıcı adı girin" required>
+                <button class="btn" type="submit">Kullanıcıyı Ara</button>
+            </form>
+
+            <div id="user-data"></div>
         </div>
-        
-        <h2>En Çok Yıldız Alan Github Repo'ları</h2>
+
+        <h2>En Çok Takip Edilen Github Kullanıcıları</h2>
         <div id="table">
             <table>
                 <thead>
@@ -38,7 +45,7 @@
                         <th>Profil Linki</th>
                     </tr>
                 </thead>
-                <tbody id="repoTableBody">
+                <tbody id="userTableBody">
                     <!-- Burada kullanıcı verileri dinamik olarak ekleniyor -->
                 </tbody>
             </table>
@@ -55,7 +62,7 @@
             </div>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="user.js"></script>
 </body>
 </html>
